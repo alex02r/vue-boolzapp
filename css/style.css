@@ -6,12 +6,12 @@
 
 body{
     height: 100vh;
-    background:linear-gradient(0deg, #DEDFDD 85%, #00A884 85%);
+    background:linear-gradient(0deg, #DEDFDD 90vh, #00A884 90vh);
 }
 
 /* Sezione di sinistra (contatti, profilo ...)*/
 .interface{
-    height: 700px;
+    height: 750px;
 }
 .profile{
     display: flex;
@@ -30,9 +30,9 @@ body{
     height: 80px;
 }
 .contacts{
-    height: calc(100% - 160px);/* da sisteamre */
+    height: calc(100% - 160px);
     background-color: white;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .contact{
     padding: 10px 20px;
@@ -51,15 +51,15 @@ body{
 
 /* CHAT sulla destra */
 .bg-chat{
+    height: 100%;
     background-image: url(../img/mine.jpg);
-    height: 700px;
 }
 .chat{
     display: flex;
     flex-direction: column;
     padding: 50px;
     overflow-y: auto;
-    height: calc(100% - 128px);/* da sisteamre */
+    height: calc(100% - 130px);
 }
 .message{
     margin: 2px 0;
@@ -80,7 +80,7 @@ body{
     justify-content: center;
     gap: 20px;
     background-color: #F0F2F5;
-    padding: 5px 0px;
+    height: 50px;
 }
 .icons i{
     margin: 0 10px;
