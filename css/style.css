@@ -14,8 +14,8 @@ body{
     height: 100vh;
     background:linear-gradient(0deg, #DEDFDD 85%, #00A884 85%);
 }
-/* Sezione di sinistra (contatti, profilo ...)*/
 
+/* Sezione di sinistra (contatti, profilo ...)*/
 .profile{
     background-color: #EAEAEA;
     padding: 10px;
@@ -30,8 +30,21 @@ body{
     height: 80px;
 }
 .contacts{
-    padding: 10px 20px;
     height: 550px;
     background-color: white;
     overflow-y: scroll;
+}
+.contact{
+    padding: 10px 20px;
+}
+.contact img{
+    width: 60px;
+    border-radius: 50%;
+}
+.contact-name{
+    margin: 0 10px;
+    font-weight: 500;
+}
+.contact:hover{
+    background-color: #EAEAEA;
 }
