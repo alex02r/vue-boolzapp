@@ -3,6 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* DA RIMUOVERE */
+.my_bg{
+    background-color: white;
+    border: 1px solid black;
+    height: 700px;
+}
+
 body{
     height: 100vh;
     background:linear-gradient(0deg, #DEDFDD 85%, #00A884 85%);
