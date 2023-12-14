@@ -15,15 +15,22 @@ body{
     background:linear-gradient(0deg, #DEDFDD 85%, #00A884 85%);
 }
 /* Sezione di sinistra (contatti, profilo ...)*/
+
 .profile{
     background-color: #EAEAEA;
-    height: 70px;
+    padding: 10px;
+}
+.profile img{
+    width: 60px;
+    border-radius: 50%;
 }
 .notice{
+    padding: 10px 20px;
     background-color: #8EDAFC;
     height: 80px;
 }
 .contacts{
+    padding: 10px 20px;
     height: 550px;
     background-color: white;
     overflow-y: scroll;
