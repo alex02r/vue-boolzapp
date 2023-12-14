@@ -178,21 +178,26 @@ createApp({
             this.empty_chat = false;
             this.currentContact = this.contacts[i];
         },
+        newDate(){
+            
+            return "oggi";
+        },
         sendNewMessage(){
             let newMessage = this.newText;
+            let date = this.newDate();
             let obj = {
-                date : 'oggi (prova)',
+                date : date,
                 message : newMessage,
                 status: 'sent'
             }
             let risposta = {
-                date : 'oggi (prova)',
+                date : '',
                 message : 'OK',
                 status: 'received'
             }
             this.currentContact.messages.push(obj);
             setTimeout(()=> {
-                // code to be executed repeatedly
+                risposta.date = this.newDate();
                 this.currentContact.messages.push(risposta);
               }, 1000);
         },
