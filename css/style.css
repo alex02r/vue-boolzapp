@@ -20,14 +20,33 @@ body{
     background-color: #EAEAEA;
     padding: 10px;
 }
-.profile img{
+.profile-img img{
     width: 60px;
     border-radius: 50%;
 }
 .notice{
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 10px 20px;
     background-color: #8EDAFC;
     height: 80px;
+}
+.ring{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.ring i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text-notice{
+    line-height: 0.4;
 }
 .search{
     height: 50px;
