@@ -35,12 +35,15 @@
                             <span class="contact-name">Nome</span>
                         </div>
                         <div class="chat">
-                            <div class="message message-my">
+                            <div class="message" v-for="(message, index) in currentContact.messages" :key="index" v-text="message.message" :class="message.status == 'sent' ? 'message-my' : 'message-yours'">
+
+                            </div>
+                            <!-- <div class="message message-my">
                                 ciao
                             </div>
                             <div class="message message-yours">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At eveniet temporibus facere eaque, obcaecati cum repellendus. Quod dolorem aliquid quidem ullam dignissimos, optio reiciendis nemo minima esse labore aperiam vel!
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
