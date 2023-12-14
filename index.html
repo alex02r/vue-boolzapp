@@ -41,8 +41,15 @@
                         </div>
                         <div class="contacts">
                             <div class="contact" v-for="contact, index in contacts" :key="index" @click="openContact(index)" v-show="contact.visible">
-                                <img :src="contact.avatar" :alt="contact.name">
-                                <span class="contact-name" v-text="contact.name"></span>
+                                <div>
+                                    <img :src="contact.avatar" :alt="contact.name">
+                                </div>
+                                <div class="w-100">
+                                    <span class="contact-name" v-text="contact.name"></span>
+                                    <span class="data-message" v-text="lastTextDate(index)"></span>
+                                    
+                                    <div class="contact-text" v-text="lastText(index)"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

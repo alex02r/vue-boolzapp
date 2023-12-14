@@ -59,6 +59,8 @@ body{
     overflow-y: auto;
 }
 .contact{
+    display: flex;
+    gap: 10px;
     padding: 10px 20px;
 }
 .contact img{
@@ -66,9 +68,18 @@ body{
     border-radius: 50%;
 }
 .contact-name{
-    margin: 0 10px;
     font-weight: 500;
 }
+.data-message{
+    float: right;
+}
+.contact-text{
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .contact:hover{
     background-color: #EAEAEA;
 }

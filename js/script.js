@@ -204,6 +204,16 @@ createApp({
                     element.visible = false;
                 }
             });
+        },
+        lastText(i){
+            let j = this.contacts[i].messages.length - 1;
+            let lastMessage = this.contacts[i].messages[j].message;
+            return lastMessage;
+        },
+        lastTextDate(i){
+            let j = this.contacts[i].messages.length - 1;
+            let lastDate = this.contacts[i].messages[j].date;
+            return lastDate;
         }
     }
 }).mount('#app');
