@@ -14,3 +14,17 @@ body{
     height: 100vh;
     background:linear-gradient(0deg, #DEDFDD 85%, #00A884 85%);
 }
+/* Sezione di sinistra (contatti, profilo ...)*/
+.profile{
+    background-color: #EAEAEA;
+    height: 70px;
+}
+.notice{
+    background-color: #8EDAFC;
+    height: 80px;
+}
+.contacts{
+    height: 550px;
+    background-color: white;
+    overflow-y: scroll;
+}
