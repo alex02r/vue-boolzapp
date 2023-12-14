@@ -3,3 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    height: 100vh;
+    background:linear-gradient(0deg, #DEDFDD 85%, #00A884 85%);
+}
