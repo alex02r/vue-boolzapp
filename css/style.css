@@ -44,11 +44,13 @@ body{
 }
 
 /* CHAT sulla destra */
+.bg-chat{
+    background-image: url(../img/mine.jpg);
+    height: 100%;
+}
 .chat{
     display: flex;
     flex-direction: column;
-    background-image: url(../img/mine.jpg);
-    height: 100%;
     padding: 50px;
 }
 .message{

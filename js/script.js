@@ -3,6 +3,8 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
+            empty_chat: true,
+            currentContact: { },
             contacts: [
                 {
                     name: 'Michele',
@@ -167,6 +169,12 @@ createApp({
                 }
             ]
             
+        }
+    },
+    methods: {
+        openContact(i){
+            this.empty_chat = false;
+            this.currentContact = this.contacts[i];
         }
     }
 }).mount('#app');
