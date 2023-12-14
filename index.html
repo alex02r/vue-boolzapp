@@ -15,7 +15,14 @@
                 <div class="col-4 p-0">
                     <div class="interface">
                         <div class="profile">
-                            <img src="./img/avatar_io.jpg" alt="immagine di profilo">
+                            <div class="profile-img">
+                                <img src="./img/avatar_io.jpg" alt="immagine di profilo">
+                            </div>
+                            <div class="icons">
+                                <i class="fa-solid fa-arrows-rotate"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
                         </div>
                         <div class="notice">
 
@@ -31,8 +38,16 @@
                 <div class="col-8 p-0">
                     <div class="bg-chat">
                         <div v-if="!empty_chat" class="profile border-start border-2">
-                            <img  :src="currentContact.avatar" alt="nome">
-                            <span class="contact-name">Nome</span>
+                            <div class="profile-img">
+                                <img  :src="currentContact.avatar" alt="nome">
+                                <span class="contact-name">Nome</span>
+                            </div>
+                            <div class="icons">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-paperclip"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                            </div>
                         </div>
                         <div class="chat">
                             <div class="message" v-for="(message, index) in currentContact.messages" :key="index" v-text="message.message" :class="message.status == 'sent' ? 'message-my' : 'message-yours'">

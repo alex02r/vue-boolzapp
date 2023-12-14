@@ -14,6 +14,9 @@ body{
     height: 700px;
 }
 .profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #EAEAEA;
     padding: 10px;
 }
@@ -77,9 +80,10 @@ body{
     justify-content: center;
     gap: 20px;
     background-color: #F0F2F5;
-    padding: 5px 20px;
+    padding: 5px 0px;
 }
 .icons i{
+    margin: 0 10px;
     font-size: 25px;
     color: gray;
 }
