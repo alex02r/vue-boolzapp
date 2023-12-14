@@ -3,11 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* DA RIMUOVERE */
-.my_bg{
-    background-image: url(../img/mine.jpg);
-    height: 100%;
-}
 
 body{
     height: 100vh;
@@ -46,4 +41,25 @@ body{
 }
 .contact:hover{
     background-color: #EAEAEA;
+}
+
+/* CHAT sulla destra */
+.chat{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/mine.jpg);
+    height: 100%;
+    padding: 50px;
+}
+.message{
+    padding: 5px 10px;
+    max-width: 400px;
+    border-radius: 10px;
+}
+.message-my{
+    align-self: flex-end;
+    background-color: #fff;
+}
+.message-yours{
+    background-color: #D9FDD3;
 }

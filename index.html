@@ -21,7 +21,7 @@
 
                         </div>
                         <div class="contacts">
-                            <div class="contact" v-for="contact, index in contacts">
+                            <div class="contact" v-for="contact, index in contacts" :key="index">
                                 <img :src="contact.avatar" :alt="contact.name">
                                 <span class="contact-name" v-text="contact.name"></span>
                             </div>
@@ -29,7 +29,18 @@
                     </div>
                 </div>
                 <div class="col-8 p-0">
-                    <div class="my_bg"></div>
+                    <div class="profile border-start border-2">
+                        <img  src="./img/avatar_1.jpg" alt="nome">
+                        <span class="contact-name">Nome</span>
+                    </div>
+                    <div class="chat">
+                        <div class="message message-my">
+                            ciao
+                        </div>
+                        <div class="message message-yours">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At eveniet temporibus facere eaque, obcaecati cum repellendus. Quod dolorem aliquid quidem ullam dignissimos, optio reiciendis nemo minima esse labore aperiam vel!
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
