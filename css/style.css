@@ -11,7 +11,7 @@ body{
 
 /* Sezione di sinistra (contatti, profilo ...)*/
 .interface{
-    height: 750px;
+    height: 800px;
 }
 .profile{
     display: flex;
@@ -29,8 +29,13 @@ body{
     background-color: #8EDAFC;
     height: 80px;
 }
+.search{
+    height: 50px;
+    padding: 5px;
+    background-color: #fff;
+}
 .contacts{
-    height: calc(100% - 160px);
+    height: calc(100% - 210px);
     background-color: white;
     overflow-y: auto;
 }
