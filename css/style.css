@@ -10,6 +10,9 @@ body{
 }
 
 /* Sezione di sinistra (contatti, profilo ...)*/
+.interface{
+    height: 700px;
+}
 .profile{
     background-color: #EAEAEA;
     padding: 10px;
@@ -24,7 +27,7 @@ body{
     height: 80px;
 }
 .contacts{
-    height: 550px;
+    height: calc(100% - 160px);/* da sisteamre */
     background-color: white;
     overflow-y: scroll;
 }
@@ -46,12 +49,14 @@ body{
 /* CHAT sulla destra */
 .bg-chat{
     background-image: url(../img/mine.jpg);
-    height: 100%;
+    height: 700px;
 }
 .chat{
     display: flex;
     flex-direction: column;
     padding: 50px;
+    overflow-y: auto;
+    height: calc(100% - 128px);/* da sisteamre */
 }
 .message{
     margin: 2px 0;
@@ -65,4 +70,16 @@ body{
 }
 .message-yours{
     background-color: #D9FDD3;
+}
+.send-message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #F0F2F5;
+    padding: 5px 20px;
+}
+.icons i{
+    font-size: 25px;
+    color: gray;
 }

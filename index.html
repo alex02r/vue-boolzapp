@@ -38,9 +38,14 @@
                             <div class="message" v-for="(message, index) in currentContact.messages" :key="index" v-text="message.message" :class="message.status == 'sent' ? 'message-my' : 'message-yours'">
 
                             </div>
-                            <div class="send-message">
-                                <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newText" @keyup.enter="sendNewMessage()">
-                                
+                        </div>
+                        <div v-if="!empty_chat" class="send-message">
+                            <div class="icons">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newText" @keyup.enter="sendNewMessage()">
+                            <div class="icons">
+                                <i class="fas fa-microphone"></i>
                             </div>
                         </div>
                     </div>
