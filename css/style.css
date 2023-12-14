@@ -5,9 +5,8 @@
 }
 /* DA RIMUOVERE */
 .my_bg{
-    background-color: white;
-    border: 1px solid black;
-    height: 700px;
+    background-image: url(../img/mine.jpg);
+    height: 100%;
 }
 
 body{
