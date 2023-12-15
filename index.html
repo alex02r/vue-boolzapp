@@ -61,7 +61,7 @@
                                 <img  :src="currentContact.avatar" :alt="currentContact.name">
                                 <div class="info">
                                     <span class="contact-name" v-text="currentContact.name"></span>
-                                    <span class="last-access"  v-text="currentContact.doing == null ? viewLastAccess() : currentContact.doing"></span>
+                                    <span class="last-access" v-text="viewLastAccess()"></span>
                                 </div>
                             </div>
                             <div class="icons">
