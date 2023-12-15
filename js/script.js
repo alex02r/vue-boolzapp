@@ -226,6 +226,11 @@ createApp({
             /* let result = `${data} ${time}`; */
             return Date;
         },
+        generateMessage(){
+            const risposte = ['Ok', 'Ciao', 'Come stai?', 'Sono impegnato...'];
+            let i = Math.floor(Math.random()* risposte.length);
+            return risposte[i];
+        },
         sendNewMessage(){
             let newMessage = this.newText;
             let date = this.newDate().time;
@@ -237,7 +242,7 @@ createApp({
             }
             let risposta = {
                 date : '',
-                message : 'OK',
+                message : this.generateMessage(),
                 status: 'received',
                 show : false
             }
