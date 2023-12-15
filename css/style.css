@@ -109,6 +109,7 @@ body{
     background-color: #fff;
 }
 .message-yours{
+    align-self: flex-start;
     background-color: #D9FDD3;
 }
 .message-data{
