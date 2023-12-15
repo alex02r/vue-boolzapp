@@ -58,17 +58,22 @@
                     <div class="bg-chat">
                         <div v-if="!empty_chat" class="profile border-start border-2">
                             <div class="profile-img">
-                                <img  :src="currentContact.avatar" alt="nome">
+                                <img  :src="currentContact.avatar" :alt="currentContact.name">
                                 <div class="info">
-                                    <span class="contact-name">Nome</span>
-                                    <span class="last-access" v-text="viewLastAccess()"></span>
+                                    <span class="contact-name" v-text="currentContact.name"></span>
+                                    <span class="last-access"  v-text="currentContact.doing == null ? viewLastAccess() : currentContact.doing"></span>
                                 </div>
                             </div>
                             <div class="icons">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <i class="fa-solid fa-paperclip"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-
+                                <i class="fa-solid fa-ellipsis-vertical" @click="currentContact.settings = !currentContact.settings"></i>
+                                <div class="settings" v-if="currentContact.settings">
+                                    <ul class="list-unstyled list-drop shadow">
+                                        <li @click="deleteChat()">Elimina tutta la chat</li>
+                                        <li @click="deleteContact()">Elimina contatto</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="chat">

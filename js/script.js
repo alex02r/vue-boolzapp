@@ -202,6 +202,8 @@ createApp({
         openContact(i){
             this.empty_chat = false;
             this.currentContact = this.contacts[i];
+            this.currentContact.settings = false;
+            this.currentContact.id = i;
         },
         viewLastAccess(){
             /* let string = `${this.newDate().data} ${this.newDate().time}` */
@@ -247,10 +249,12 @@ createApp({
                 show : false
             }
             this.currentContact.messages.push(obj);
+            this.currentContact.doing = 'Sta scrivendo...';
             setTimeout(()=> {
                 risposta.date = this.newDate().time;
                 this.currentContact.messages.push(risposta);
-              }, 1000);
+                this.currentContact.doing = null;
+              }, 2000);
             this.newText = '';
         },
         searchContact(){
@@ -294,6 +298,14 @@ createApp({
             let i = this.messageClicked.index;
             this.currentContact.messages.splice(i,1);
             this.messageClicked.index = null;
+        },
+        deleteChat(){
+            this.currentContact.messages = [];
+        },
+        deleteContact(){
+            let i = this.currentContact.id;
+            this.contacts.splice(i, 1);
+            this.openContact(0);
         }
 
     }

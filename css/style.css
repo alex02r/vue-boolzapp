@@ -14,6 +14,7 @@ body{
     height: 800px;
 }
 .profile{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,6 +101,13 @@ body{
 .bg-chat{
     height: 800px;
     background-image: url(../img/mine.jpg);
+}
+/* menu impostazioni contatto */
+.settings{
+    position: absolute;
+    right: 5px;
+    z-index: 999;
+    min-width: 250px;
 }
 .chat{
     display: flex;
