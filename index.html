@@ -69,9 +69,22 @@
                             </div>
                         </div>
                         <div class="chat">
-                            <div class="message" v-for="(message, index) in currentContact.messages" :key="index" :class="message.status == 'sent' ? 'message-my' : 'message-yours'">
+                            <div 
+                                class="message" 
+                                v-for="(message, index) in currentContact.messages" 
+                                :key="index" 
+                                :class="message.status == 'sent' ? 'message-my' : 'message-yours'"
+                                @click="message.show = !message.show"
+                            >
                                 <div class="message-text" v-text="message.message"></div>
                                 <div class="message-data" v-text="message.date"></div>
+                                <div class="my-dropdown" v-show="message.show" :class="message.status == 'sent' ? 'message-my' : 'message-yours'">
+                                    &#709;
+                                    <ul class="list-unstyled list-drop shadow" v-if="message.show">
+                                        <li>message info</li>
+                                        <li @click="deleteMessage(index)">delete message</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div v-if="!empty_chat" class="send-message">
