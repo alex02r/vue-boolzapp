@@ -6,6 +6,10 @@ createApp({
             search: '',
             empty_chat: true,
             newText: '',
+            messageClicked: { 
+                index: null,
+                show: false
+            },
             currentContact: { },
             contacts: [
                 {
@@ -247,7 +251,16 @@ createApp({
             let lastDate = this.contacts[i].messages[j].date;
             return lastDate;
         },
-        deleteMessage(i){
+        dropdownClick(i){
+            if (this.messageClicked.index != null) {
+                let j = this.messageClicked.index;
+                this.currentContact.messages[j].show = false;
+            }
+            this.messageClicked.index = i;
+            this.currentContact.messages[i].show = !this.currentContact.messages[i].show;
+        },
+        deleteMessage(){
+            let i = this.messageClicked.index;
             this.currentContact.messages.splice(i,1);
         }
 

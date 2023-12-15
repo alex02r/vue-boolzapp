@@ -81,13 +81,13 @@
                                     <button 
                                         class="my-dropdown-button" 
                                         :class="message.status == 'sent' ? 'message-my' : 'message-yours'"
-                                        @click="message.show = !message.show"
+                                        @click="dropdownClick(index)"
                                     >
                                     &#709;
                                     </button>
                                     <ul class="list-unstyled list-drop shadow" v-if="message.show">
                                         <li>message info</li>
-                                        <li @click="deleteMessage(index)">delete message</li>
+                                        <li @click="deleteMessage">delete message</li>
                                     </ul>
                                 </div>
                                 
