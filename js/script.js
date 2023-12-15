@@ -208,7 +208,7 @@ createApp({
             let last_access;
             this.currentContact.messages.forEach(element => {
                 if (element.status == 'received') {
-                    last_access = element.date;
+                    last_access = `Ultimo accesso : ${element.date}`;
                 }
             });
             

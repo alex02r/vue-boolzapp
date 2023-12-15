@@ -20,9 +20,21 @@ body{
     background-color: #EAEAEA;
     padding: 10px;
 }
+.profile-img{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 .profile-img img{
     width: 60px;
     border-radius: 50%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.last-access{
+    color: grey;
 }
 .notice{
     display: flex;
