@@ -203,16 +203,32 @@ createApp({
             this.empty_chat = false;
             this.currentContact = this.contacts[i];
         },
+        viewLastAccess(){
+            /* let string = `${this.newDate().data} ${this.newDate().time}` */
+            let last_access;
+            this.currentContact.messages.forEach(element => {
+                if (element.status == 'received') {
+                    last_access = element.date;
+                }
+            });
+            
+            return last_access ;
+
+        },
         newDate(){
             let dt = luxon.DateTime.now();
-            /* let data = `${dt.year}/${dt.month}/${dt.day}`; */
+             let data = `${dt.year}/${dt.month}/${dt.day}`; 
             let time = `${dt.hour}:${dt.minute}`;
+            let Date = {
+                data : data,
+                time : time
+            }
             /* let result = `${data} ${time}`; */
-            return time;
+            return Date;
         },
         sendNewMessage(){
             let newMessage = this.newText;
-            let date = this.newDate();
+            let date = this.newDate().time;
             let obj = {
                 date : date,
                 message : newMessage,
@@ -227,7 +243,7 @@ createApp({
             }
             this.currentContact.messages.push(obj);
             setTimeout(()=> {
-                risposta.date = this.newDate();
+                risposta.date = this.newDate().time;
                 this.currentContact.messages.push(risposta);
               }, 1000);
             this.newText = '';
@@ -264,6 +280,7 @@ createApp({
         deleteMessage(){
             let i = this.messageClicked.index;
             this.currentContact.messages.splice(i,1);
+            this.messageClicked.index = null;
         }
 
     }
