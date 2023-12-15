@@ -77,7 +77,7 @@
                             >
                                 <div class="message-text" v-text="message.message"></div>
                                 <div class="message-data" v-text="message.date"></div>
-                                <div class="my-dropdown" :style="message.show ? 'display: flex' : ''">
+                                <div class="my-dropdown" :class="message.show ? 'd-flex' : ''">
                                     <button 
                                         class="my-dropdown-button" 
                                         :class="message.status == 'sent' ? 'message-my' : 'message-yours'"
