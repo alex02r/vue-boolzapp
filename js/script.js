@@ -252,12 +252,14 @@ createApp({
             return lastDate;
         },
         dropdownClick(i){
-            if (this.messageClicked.index != null) {
-                let j = this.messageClicked.index;
+            this.currentContact.messages[i].show = !this.currentContact.messages[i].show;
+            let j = this.messageClicked.index;
+            if ( j != null && j != i) {
                 this.currentContact.messages[j].show = false;
             }
             this.messageClicked.index = i;
-            this.currentContact.messages[i].show = !this.currentContact.messages[i].show;
+            
+            
         },
         deleteMessage(){
             let i = this.messageClicked.index;
