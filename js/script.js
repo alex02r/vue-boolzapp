@@ -179,8 +179,11 @@ createApp({
             this.currentContact = this.contacts[i];
         },
         newDate(){
-            
-            return "oggi";
+            let dt = luxon.DateTime.now();
+            let data = `${dt.year}/${dt.month}/${dt.day}`;
+            let time = `${dt.hour}:${dt.minute}`;
+            let result = `${data} ${time}`;
+            return result;
         },
         sendNewMessage(){
             let newMessage = this.newText;
@@ -200,6 +203,7 @@ createApp({
                 risposta.date = this.newDate();
                 this.currentContact.messages.push(risposta);
               }, 1000);
+            this.newText = '';
         },
         searchContact(){
             this.contacts.forEach(element => {
