@@ -97,9 +97,12 @@
                             <div class="icons">
                                 <i class="fa-regular fa-face-smile"></i>
                             </div>
-                            <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newText" @keyup.enter="sendNewMessage()">
-                            <div class="icons">
+                            <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newText"  @keyup.enter="sendNewMessage()">
+                            <div class="icons" v-if="newText == ''">
                                 <i class="fas fa-microphone"></i>
+                            </div>
+                            <div class="icons" v-else>
+                                <i class="fa-solid fa-share"></i>
                             </div>
                         </div>
                     </div>
