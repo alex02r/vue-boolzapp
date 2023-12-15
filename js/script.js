@@ -5,6 +5,13 @@ createApp({
         return{
             search: '',
             empty_chat: true,
+            addContact: false,
+            newContact: {
+                name: '',
+                avatar: './img/default-avatar.png',
+                visible: true,
+                messages: []
+            },
             newText: '',
             messageClicked: { 
                 index: null,
@@ -306,6 +313,11 @@ createApp({
             let i = this.currentContact.id;
             this.contacts.splice(i, 1);
             this.openContact(0);
+        },
+        createNewContact(){
+            let obj = this.newContact;
+            this.newContact = {};
+            this.contacts.push(obj);
         }
 
     }
