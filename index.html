@@ -60,6 +60,7 @@
                             <div class="profile-img">
                                 <img  :src="currentContact.avatar" alt="nome">
                                 <span class="contact-name">Nome</span>
+                                <span v-text="viewLastAccess()"></span>
                             </div>
                             <div class="icons">
                                 <i class="fa-solid fa-magnifying-glass"></i>

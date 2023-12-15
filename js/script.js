@@ -258,13 +258,21 @@ createApp({
             });
         },
         lastText(i){
-            let j = this.contacts[i].messages.length - 1;
-            let lastMessage = this.contacts[i].messages[j].message;
+            let lastMessage;
+            this.contacts[i].messages.forEach(element => {
+                if (element.status == 'received') {
+                    lastMessage = element.message;
+                }
+            });
             return lastMessage;
         },
         lastTextDate(i){
-            let j = this.contacts[i].messages.length - 1;
-            let lastDate = this.contacts[i].messages[j].date;
+            let lastDate;
+            this.contacts[i].messages.forEach(element =>{
+                if(element.status == 'received'){
+                    lastDate = element.date;
+                }
+            });
             return lastDate;
         },
         dropdownClick(i){
