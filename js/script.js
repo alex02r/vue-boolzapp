@@ -247,10 +247,12 @@ createApp({
                 show : false
             }
             this.currentContact.messages.push(obj);
+            this.currentContact.doing = 'Sta scrivendo...';
             setTimeout(()=> {
                 risposta.date = this.newDate().time;
                 this.currentContact.messages.push(risposta);
-              }, 1000);
+                this.currentContact.doing = null;
+              }, 2000);
             this.newText = '';
         },
         searchContact(){
