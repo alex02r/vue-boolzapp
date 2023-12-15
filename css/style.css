@@ -118,21 +118,37 @@ body{
     font-size: 12px;
 }
 .my-dropdown{
+    display: none;
+    flex-direction: column;
     position: absolute;
-    top: 50%;
     right: 10px;
-    font-size: 20px;
-    color: grey;
-    transform: translateY(-50%);
+    top: 0;
     cursor: pointer;
 }
+.message:hover .my-dropdown{
+    display: flex;
+}
+.my-dropdown-button{
+    align-self: flex-end;
+    border: none;
+    font-size: 20px;
+    color: grey;
+    position: relative;
+}
 .list-drop{
-    position: absolute;
+    min-width: 140px;
     background-color: #fff;
-    padding: 5px 10px;
     font-size: 16px;
     color: black;
     border-radius: 5px;
+    padding: 5px 0;
+    z-index: 999;
+}
+.list-drop li{
+    padding: 5px 10px;
+}
+.list-drop li:hover{
+    backdrop-filter: brightness(0.9);
 }
 .send-message{
     display: flex;
