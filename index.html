@@ -70,8 +70,8 @@
                         </div>
                         <div class="chat">
                             <div class="message" v-for="(message, index) in currentContact.messages" :key="index" :class="message.status == 'sent' ? 'message-my' : 'message-yours'">
-                                <span v-text="message.message"></span>
-                                <span v-text="message.date"></span>
+                                <div class="message-text" v-text="message.message"></div>
+                                <div class="message-data" v-text="message.date"></div>
                             </div>
                         </div>
                         <div v-if="!empty_chat" class="send-message">

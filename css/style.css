@@ -97,6 +97,8 @@ body{
     height: calc(100% - 130px);
 }
 .message{
+    display: flex;
+    gap: 10px;
     margin: 2px 0;
     padding: 5px 10px;
     max-width: 400px;
@@ -108,6 +110,10 @@ body{
 }
 .message-yours{
     background-color: #D9FDD3;
+}
+.message-data{
+    align-self: flex-end;
+    font-size: 12px;
 }
 .send-message{
     display: flex;
