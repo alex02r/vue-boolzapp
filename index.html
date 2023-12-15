@@ -101,8 +101,8 @@
                             <div class="icons" v-if="newText == ''">
                                 <i class="fas fa-microphone"></i>
                             </div>
-                            <div class="icons" v-else>
-                                <i class="fa-solid fa-share"></i>
+                            <div class="icons" v-else >
+                                <i class="fa-solid fa-share" @click="sendNewMessage()"></i>
                             </div>
                         </div>
                     </div>
