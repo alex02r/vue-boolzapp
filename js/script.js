@@ -316,7 +316,12 @@ createApp({
         },
         createNewContact(){
             let obj = this.newContact;
-            this.newContact = {};
+            this.newContact = {
+                name: '',
+                avatar: './img/default-avatar.png',
+                visible: true,
+                messages: []
+            };
             this.contacts.push(obj);
         }
 
