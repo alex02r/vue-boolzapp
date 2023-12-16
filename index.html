@@ -12,7 +12,7 @@
     <div id="app">
         <div class="container-md py-3">
             <div class="row">
-                <div class="col-4 p-0">
+                <div class="col-md-4 p-0" :class="empty_chat ? 'col-12' :windowWidth()">
                     <div class="interface">
                         <div class="profile">
                             <div class="profile-img">
@@ -57,10 +57,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-8 p-0">
+                <div class="col-md-8 p-0" :class="!empty_chat ? 'col-12' : ''">
                     <div class="bg-chat">
                         <div v-if="!empty_chat" class="profile border-start border-2">
                             <div class="profile-img">
+                                <div class="text-secondary fs-5" @click="empty_chat = true">
+                                    <i class="fas fa-angle-left"></i>
+                                </div>
                                 <img  :src="currentContact.avatar" :alt="currentContact.name">
                                 <div class="info">
                                     <span class="contact-name" v-text="currentContact.name"></span>

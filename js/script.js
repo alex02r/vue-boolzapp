@@ -204,6 +204,8 @@ createApp({
             ]
             
         }
+    }, created() {
+        this.windowWidth();
     },
     methods: {
         openContact(i){
@@ -330,6 +332,14 @@ createApp({
         scrollChatToBottom(){
             const chat = this.$refs.messages;
             chat.scrollTop = chat.scrollHeight;
+        },
+        windowWidth(){
+            let windowWidth = window.innerWidth;
+            let display = '' 
+            if (windowWidth < 765) {
+                display = 'd-none';
+            }
+            return display
         }
     }
 }).mount('#app');
