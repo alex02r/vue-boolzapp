@@ -207,6 +207,7 @@ createApp({
     },
     methods: {
         openContact(i){
+            this.scrollChatToBottom();
             this.empty_chat = false;
             this.currentContact = this.contacts[i];
             this.currentContact.settings = false;
@@ -256,11 +257,13 @@ createApp({
                 show : false
             }
             this.currentContact.messages.push(obj);
+            this.scrollChatToBottom();
             this.currentContact.doing = 'Sta scrivendo...';
             setTimeout(()=> {
                 risposta.date = this.newDate().time;
                 this.currentContact.messages.push(risposta);
                 this.currentContact.doing = null;
+                this.scrollChatToBottom();
               }, 2000);
             this.newText = '';
         },
@@ -323,7 +326,10 @@ createApp({
                 messages: []
             };
             this.contacts.push(obj);
+        },
+        scrollChatToBottom(){
+            const chat = this.$refs.messages;
+            chat.scrollTop = chat.scrollHeight;
         }
-
     }
 }).mount('#app');

@@ -114,7 +114,7 @@ body{
     flex-direction: column;
     padding: 50px;
     overflow-y: auto;
-    height: calc(100% - 130px);
+    height: 670px;
 }
 .message{
     position: relative;
