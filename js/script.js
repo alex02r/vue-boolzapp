@@ -259,8 +259,8 @@ createApp({
                 show : false
             }
             this.currentContact.messages.push(obj);
-            this.scrollChatToBottom();
             this.currentContact.doing = 'Sta scrivendo...';
+            this.scrollChatToBottom();
             setTimeout(()=> {
                 risposta.date = this.newDate().time;
                 this.currentContact.messages.push(risposta);
