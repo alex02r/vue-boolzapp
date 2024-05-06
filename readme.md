@@ -12,7 +12,5 @@ Boolzapp è un'applicazione di messaggistica istantanea sviluppata in JavaScript
 
 ## Tecnologie Utilizzate
 
-- **JavaScript**: Linguaggio di programmazione principale per lo sviluppo del frontend e del backend.
-- **Node.js**: Utilizzato per il backend dell'applicazione.
-- **Express.js**: Framework web utilizzato per gestire le richieste HTTP.
+- **JavaScript**: Linguaggio di programmazione principale per lo sviluppo del frontend.
 - **HTML e CSS**: Utilizzati per la struttura e lo stile dell'interfaccia utente.
